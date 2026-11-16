@@ -11,7 +11,5 @@ The code for my151 and Snippets is public, with its full history.
 
 ## Earlier projects
 
-These two have no public code.
-
-- **[Alphabet Designer](https://alphabet-draft.vercel.app)**: pick characters from 32 writing systems and combine them into your own alphabet. It was the first time I realized I could build on the go: on the subway, I sent a prompt from my phone at one station, rode through the tunnel with no signal, and found the updated app waiting at the next station.
-- **Vocab Builder**: my personal vocabulary app, which replaced a Google Sheets workflow of more than 1,600 words. It was my first app built with Claude Code, on December 31, 2025, when Claude Code ran only in the terminal. Before that, I used Claude Code to fix compile errors while converting Rock Band songs I found online into a format I could play on my PS4.
+- **[Alphabet Designer](https://alphabet-draft.vercel.app)** ([code](https://github.com/michael-samoilov/Alphabet-draft)): pick characters from 32 writing systems and combine them into your own alphabet. It was the first time I realized I could build on the go: on the subway, I sent a prompt from my phone at one station, rode through the tunnel with no signal, and found the updated app waiting at the next station.
+- **Vocab Builder** (private code): my personal vocabulary app, which replaced a Google Sheets workflow of more than 1,600 words. It was my first app built with Claude Code, on December 31, 2025, when Claude Code ran only in the terminal. Before that, I used Claude Code to fix compile errors while converting Rock Band songs I found online into a format I could play on my PS4.
