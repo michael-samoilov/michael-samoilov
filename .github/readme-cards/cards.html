@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --panel: #f6f8fa; --border: #d0d7de; --text: #1f2328; --dim: #59636e;
+    --accent: #1a7f37; --bar: #2da44e; --shot: #f4f4f5;
+  }
+  body.dark {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #e6edf3; --dim: #8b949e;
+    --accent: #3fb950; --bar: #3fb950; --shot: #f4f4f5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: transparent; font-family: Inter, sans-serif; color: var(--text); padding: 20px; }
+  body > div { margin-bottom: 40px; }
+  .mono { font-family: 'JetBrains Mono', 'DejaVu Sans Mono', monospace; }
+  .frame { background: var(--bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+
+  #hero { width: 640px; }
+  #hero .top { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px 0; font-size: 17px; color: var(--dim); }
+  #hero .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-right: 7px; vertical-align: 1px; }
+  #hero svg { display: block; margin: 6px 0 0; }
+  #hero .caption { padding: 0 20px 14px; font-size: 15px; color: var(--dim); text-align: right; }
+  #hero .name { border-top: 1px solid var(--border); padding: 22px 20px 20px; }
+  #hero h1 { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 44px; letter-spacing: -0.02em; line-height: 1.05; }
+  #hero .tag { font-size: 23px; color: var(--dim); margin-top: 8px; }
+  #hero .grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--border); }
+  #hero .cell { padding: 14px 20px 16px; }
+  #hero .cell:nth-child(odd) { border-right: 1px solid var(--border); }
+  #hero .cell:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  #hero .label { font-size: 16px; color: var(--dim); letter-spacing: 0.06em; text-transform: uppercase; }
+  #hero .value { font-size: 22px; font-weight: 500; margin-top: 5px; line-height: 1.25; }
+
+  .card { width: 420px; height: 344px; padding: 18px; display: flex; flex-direction: column; }
+  .card .head { display: flex; justify-content: space-between; align-items: center; }
+  .card h2 { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 32px; letter-spacing: -0.015em; line-height: 1.1; }
+  .card .domain { font-size: 14px; color: var(--dim); margin-top: 5px; }
+  .pill { font-size: 17px; border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; color: var(--dim); white-space: nowrap; margin-top: 3px; }
+  .pill .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 6px; vertical-align: 1px; }
+  .pill.private .dot { background: var(--dim); }
+  .panel { margin-top: 14px; flex: 1; border-radius: 10px; overflow: hidden; background: var(--shot); position: relative; border: 1px solid var(--border); }
+  .panel img.cover { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .phones { display: flex; gap: 10px; padding: 12px 12px 0; height: 100%; }
+  .phones img { flex: 1; min-width: 0; height: calc(100% + 40px); object-fit: cover; object-position: top; border-radius: 9px; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
+  .duo img.desk { position: absolute; left: 12px; top: 12px; width: 300px; border-radius: 8px; box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
+  .duo img.phone { position: absolute; right: 14px; top: 26px; width: 108px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,0,0,0.08); }
+  .type { background: var(--panel); padding: 18px 20px; display: flex; flex-direction: column; justify-content: center; }
+  .type .big { font-family: 'Inter Display', Inter, sans-serif; font-weight: 600; font-size: 58px; letter-spacing: -0.03em; line-height: 1; }
+  .type .unit { font-size: 22px; color: var(--dim); margin-top: 6px; }
+  .type .rule { border-top: 1px solid var(--border); margin: 16px 0 12px; }
+  .type .fact { font-size: 20px; line-height: 1.35; }
+
+</style>
+</head>
+<body>
+  <div id="hero" class="frame">
+    <div class="top mono"><span>michael-samoilov</span><span><span class="dot"></span>building</span></div>
+    <svg id="wave" width="640" height="118"></svg>
+    <div class="caption mono">commits per day, March to November 2026</div>
+    <div class="name">
+      <h1>Michael Samoilov</h1>
+      <div class="tag">I build and run web products.</div>
+    </div>
+    <div class="grid">
+      <div class="cell"><div class="label mono">Now</div><div class="value">Running my151.app and Snippets</div></div>
+      <div class="cell"><div class="label mono">Focus</div><div class="value">Product, analytics, and operations</div></div>
+      <div class="cell"><div class="label mono">Built with</div><div class="value">AI coding agents</div></div>
+      <div class="cell"><div class="label mono">Shipped</div><div class="value">Four web apps</div></div>
+    </div>
+  </div>
+
+  <div id="card-my151" class="frame card">
+    <div class="head"><h2>my151</h2><span class="pill mono"><span class="dot"></span>Live</span></div>
+    <div class="panel"><img class="cover" src="https://raw.githubusercontent.com/michael-samoilov/my151-public/main/docs/readme/phones.webp"></div>
+  </div>
+
+  <div id="card-snippets" class="frame card">
+    <div class="head"><h2>Snippets</h2><span class="pill mono"><span class="dot"></span>Live</span></div>
+    <div class="panel"><div class="phones">
+      <img src="https://raw.githubusercontent.com/michael-samoilov/snippets-public/main/docs/images/today-phone.webp"><img src="https://raw.githubusercontent.com/michael-samoilov/snippets-public/main/docs/images/month-phone.webp"><img src="https://raw.githubusercontent.com/michael-samoilov/snippets-public/main/docs/images/book-phone-lamplight.webp">
+    </div></div>
+  </div>
+
+  <div id="card-alphabet" class="frame card">
+    <div class="head"><h2>Alphabet Designer</h2><span class="pill mono"><span class="dot"></span>Live</span></div>
+    <div class="panel duo"><img class="desk" src="https://raw.githubusercontent.com/michael-samoilov/Alphabet-draft/main/docs/screenshot-desktop.png"><img class="phone" src="https://raw.githubusercontent.com/michael-samoilov/Alphabet-draft/main/docs/screenshot-phone.png"></div>
+  </div>
+
+  <div id="card-vocab" class="frame card">
+    <div class="head"><h2>Vocab Builder</h2><span class="pill mono private"><span class="dot"></span>Private</span></div>
+    <div class="panel type">
+      <div class="big">1,600+</div>
+      <div class="unit">words collected</div>
+      <div class="rule"></div>
+      <div class="fact">My first app built with Claude Code, on December 31, 2025</div>
+    </div>
+  </div>
+
+
+<script>
+  const params = new URLSearchParams(location.search);
+  if (params.get('theme') === 'dark') document.body.classList.add('dark');
+  window.drawWave = (data) => {
+    const svg = document.getElementById('wave');
+    const W = 640, H = 118, padX = 20, mid = H / 2;
+    const n = data.counts.length, step = (W - 2 * padX) / n, bw = Math.max(1.2, step * 0.62);
+    const max = Math.sqrt(Math.max(...data.counts));
+    const ns = 'http://www.w3.org/2000/svg';
+    const base = document.createElementNS(ns, 'line');
+    Object.entries({ x1: padX, x2: W - padX, y1: mid, y2: mid, stroke: 'var(--border)', 'stroke-width': 1 }).forEach(([k, v]) => base.setAttribute(k, v));
+    svg.appendChild(base);
+    data.counts.forEach((c, i) => {
+      if (!c) return;
+      const h = Math.max(2, (Math.sqrt(c) / max) * (H / 2 - 4) * 2);
+      const r = document.createElementNS(ns, 'rect');
+      r.setAttribute('x', (padX + i * step).toFixed(2));
+      r.setAttribute('y', (mid - h / 2).toFixed(2));
+      r.setAttribute('width', bw.toFixed(2));
+      r.setAttribute('height', h.toFixed(2));
+      r.setAttribute('rx', Math.min(1, bw / 2));
+      r.setAttribute('fill', 'var(--bar)');
+      r.setAttribute('opacity', (0.35 + 0.65 * Math.sqrt(c) / max).toFixed(2));
+      svg.appendChild(r);
+    });
+  };
+</script>
+</body>
+</html>
